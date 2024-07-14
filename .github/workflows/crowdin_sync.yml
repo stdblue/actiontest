@@ -46,8 +46,8 @@ jobs:
       - name: Push global.ini
         run: |
           echo "v3.23.1a-$(TZ=Asia/Tokyo date +%Y%m%d-%H%M%S)" > TAG_NAME
-          cp -f work/global.ini v3.23.1a/release/japanese_(japan)/global-nightly.ini
-          git add v3.23.1a/release/japanese_(japan)/global-nightly.ini
+          cp -f work/global.ini v3.23.1a/release/japanese_\(japan\)/global-nightly.ini
+          git add v3.23.1a/release/japanese_\(japan\)/global-nightly.ini
           git commit -m "Nightly update : $(cat TAG_NAME)"
           git push
 
