@@ -79,9 +79,9 @@ if os.path.isfile(workfile):
     filesize = os.path.getsize(workfile)
     print("Filesize : " + str(filesize))
 
-    work_files = os.listdir("./work")
+    work_files = os.listdir(".github/work")
     print(work_files)
 
-    shutil.make_archive('global.ini', format='zip', root_dir='work')
+    shutil.make_archive('global.ini', format='zip', root_dir='.github/work')
 else:
     print("Failed to create file.")
