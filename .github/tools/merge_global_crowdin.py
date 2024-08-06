@@ -51,6 +51,15 @@ def readdict(dictfile, dictinary):
 
 readdict(dictionary_file, translate_dict)
 
+if os.path.isfile(source_file):
+    print("### Source file is received : " + source_file)
+    filesize = os.path.getsize(source_file)
+    print("### Filesize : " + str(filesize))
+
+else:
+    print("!!! Source file does not exists : " + source_file)
+    exit(-1)
+
 keyword_matched = 0
 no_target = 0
 no_match_pattern = 0
