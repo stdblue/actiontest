@@ -22,7 +22,7 @@ jobs:
           push_translations: false
           create_pull_request: false
           crowdin_branch_name: crowdin
-          config: 'crowdin.yml'
+          config: '.github/crowdin.yml'
           
         env:
           # Auto Github Token
@@ -46,7 +46,7 @@ jobs:
       - name: Push global.ini
         run: |
           echo "v3.23.1a-$(TZ=Asia/Tokyo date +%Y%m%d-%H%M%S)" > TAG_NAME
-          cp -f work/global.ini v3.23.1a/release/japanese_\(japan\)/global-nightly.ini
+          cp -f .github/work/global.ini v3.23.1a/release/japanese_\(japan\)/global-nightly.ini
           git add v3.23.1a/release/japanese_\(japan\)/global-nightly.ini
           git config user.name github-actions
           git config user.email github-actions@github.com

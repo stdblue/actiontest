@@ -11,9 +11,9 @@ translate_dict = {}
 pattern = r'^(?P<key>.+)=(?P<value>.*)\n$'
 pat = re.compile(pattern)
 
-dictionary_file = 'release/Japanese/global.ini'
-workfile = 'work/global.ini'
-source_file = 'v3.22.0/source/english/global.ini'
+dictionary_file = '.github/release/Japanese/global.ini'
+workfile = '.github/work/global.ini'
+source_file = '.github/v3.22.0/source/english/global.ini'
 
 print('Current workspace : ' + os.getcwd())
 # print(glob.glob('global.ini', recursive=True))
